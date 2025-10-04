@@ -11,7 +11,6 @@ export default function Callback() {
   const router = useRouter();
 
   useEffect(() => {
-    // Let Supabase handle the redirect and then go back to home
     supabase.auth.getSession().then(() => {
       router.push("/");
     });
